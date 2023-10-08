@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +8,7 @@ import { SlideComponent } from './slide/slide.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { FooterComponent } from './footer/footer.component';
 import { UsersComponent } from './users/users.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { UsersComponent } from './users/users.component';
     SlideComponent,
     UserListComponent,
     FooterComponent,
-    UsersComponent
+    UsersComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
