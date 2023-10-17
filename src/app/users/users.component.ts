@@ -13,7 +13,7 @@ export class UsersComponent {
   //injecter le service ActivatedRoute 
 constructor(private ac:ActivatedRoute){}
 
-ngOnInit(){ //méthode appelé juste git après la création du composant
+ngOnInit(){ //méthode appelé juste après la création du composant
   console.log("je suis ngOnInit");
 //exemple1: avec snapshot
   //console.log(this.ac.snapshot.params['category']);
