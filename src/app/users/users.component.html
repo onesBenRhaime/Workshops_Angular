@@ -1,55 +1,30 @@
-<br />
-<h3 style="text-align: center">List users</h3>
-<br />
-<div class="container-xl">
-  <div class="row row-cards">
-    <div class="col-12">
-      <div class="card">
-        <div class="table-responsive">
-          <table class="table table-vcenter table-mobile-md card-table">
-            <thead>
-              <tr>
-                <th>idCustomer</th>
-                <th>firstName</th>
-                <th>lastName</th>
-                <th>birthDate</th>
-                <th>email</th>
-                <th>password</th>
-                <th>profession?</th>
-                <th>accountCategory</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tr *ngFor="let u of list; let i = index">
-              <td>{{ u.idCustomer }}</td>
-              <td>{{ u.firstName }}</td>
-              <td>{{ u.lastName }}</td>
-              <td>{{ u.birthDate }}</td>
-              <td>{{ u.email }}</td>
-              <td>{{ u.password }}</td>
-              <td>{{ u.profession }}</td>
-              <td>{{ u.accountCategory }}</td>
-              <td>
-                <button (click)="delete(i)" class="btn-btn text-danger">
-                  delete
-                </button>
-                <button
-                  [hidden]="u.accountCategory == 'Admin'"
-                  class="btn-btn text-danger"
-                >
-                  Admin
-                </button>
-                <button
-                  *ngIf="u.accountCategory == 'Admin'"
-                  class="btn-btn text-danger"
-                >
-                  Admin
-                </button>
-              </td>
-            </tr>
-          </table>
-        </div>
-      </div>
+
+Catégorie : <input type="text" [(ngModel)]="category" #v /> {{ v.value }}
+<table>
+  <tr>
+    <th>id</th>
+  </tr>
+  <tr
+    *ngFor="
+      let u of list;
+      let i = index;
+      let j = first;
+      let k = last;
+      let o = odd;
+      let v = even
+    "
+  >
+    <div *ngIf="u.accountCategory == category">
+      <td>{{ u.idCustomer }} ** {{ i }} ** {{ j }}</td>
+      <button [disabled]="u.accountCategory == 'Admin'" (click)="delete(i)">
+        Delete
+      </button>
+      <button [hidden]="u.accountCategory == 'Admin'" (click)="delete(i)">
+        Delete
+      </button>
+      <button *ngIf="u.accountCategory != 'Admin'" (click)="delete(i)">
+        Delete
+      </button>
     </div>
-  </div>
-</div>
+  </tr>
+</table>
