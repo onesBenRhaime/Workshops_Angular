@@ -6,7 +6,8 @@ import { UsersComponent } from './components/users/users.component';
 const routes: Routes = [
 //route par défaut au chargement du module
  {path:"", component:UserListComponent, children:[
-    {path:"users/:category", component:UsersComponent}
+    {path:"users/:category", component:UsersComponent},
+    {path:"users/:users", component:UsersComponent}
   ]}
 ];
 

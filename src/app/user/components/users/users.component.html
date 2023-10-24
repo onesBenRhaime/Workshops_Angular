@@ -1,17 +1,65 @@
-Catégorie : <input type="text" [(ngModel)]="category" #v> {{v.value}}
+<br />
+Catégorie : <input type="text" [(ngModel)]="category" #v /> {{ v.value }}
 <table>
-    <tr> <th>id
-    </th>
-    </tr>
-    <tr *ngFor="let u of list; 
-    let i=index; let j=first; let k=last; 
-    let o=odd; let v=even" >
+  <tr>
+    <th>id</th>
+  </tr>
+  <tr
+    *ngFor="
+      let u of list;
+      let i = index;
+      let j = first;
+      let k = last;
+      let o = odd;
+      let v = even
+    "
+  >
     <div *ngIf="u.accountCategory == category">
-        <td>{{u.idCustomer}} 
-            ** {{i}} ** {{j}}</td> 
-        <button [disabled]="u.accountCategory == 'Admin'" (click)="delete(i)">Delete</button>
-        <button [hidden]="u.accountCategory == 'Admin'" (click)="delete(i)">Delete</button>
-        <button *ngIf="u.accountCategory != 'Admin'" (click)="delete(i)">Delete</button>
+      <td>{{ u.id }} ** {{ i }} ** {{ j }}</td>
+      <td>id : API{{ u.id }} ** {{ u.firstName }}</td>
+      <button [disabled]="u.accountCategory == 'Admin'" (click)="delete(i)">
+        Delete
+      </button>
+      <button [hidden]="u.accountCategory == 'Admin'" (click)="delete(i)">
+        Delete
+      </button>
+      <button *ngIf="u.accountCategory != 'Admin'" (click)="delete(i)">
+        Delete
+      </button>
     </div>
-    </tr>
+  </tr>
 </table>
+
+<h1 style="text-align: center">Resultat API : GET</h1>
+<br />
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>firstName</th>
+      <th>lastName</th>
+      <th>birthDate</th>
+      <th>email</th>
+      <th>password</th>
+      <th>profession</th>
+      <th>accountCategory</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of list">
+      <td>{{ u.id }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre></pre>
+<h1 style="text-align: center">
+  Resultat API : Post <button (click)="add()">ADD</button>
+</h1>
