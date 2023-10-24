@@ -1,0 +1,44 @@
+<br /><br />
+<div>
+  <div class="row align-items-center">
+    <div class="col">
+      <div class="page-pretitle"></div>
+      <h2 class="page-title">List Users</h2>
+    </div>
+    <div class="col-auto ms-auto d-print-none">
+      <div class="btn-list">
+        <button (click)="add()" class="btn btn-primary">+ Add New</button>
+      </div>
+    </div>
+  </div>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>BirthDate</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Profession</th>
+      <th>AccountCategory</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let u of list">
+      <td>{{ u.id }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>{{ u.firstName }}</td>
+      <td>
+        <button class="btn text-danger" (click)="delete(u.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

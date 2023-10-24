@@ -87,4 +87,7 @@ export class UserService {
   addUser($user:User){
     return this._http.post<{User:User}>("http://localhost:3000/users",$user);
    }
+   deleteUser($id ){
+    return this._http.delete<{User:User}>("http://localhost:3000/users",$id);
+   }
 }

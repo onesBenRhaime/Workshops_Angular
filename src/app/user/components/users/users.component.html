@@ -29,37 +29,3 @@ Catégorie : <input type="text" [(ngModel)]="category" #v /> {{ v.value }}
     </div>
   </tr>
 </table>
-
-<h1 style="text-align: center">Resultat API : GET</h1>
-<br />
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>firstName</th>
-      <th>lastName</th>
-      <th>birthDate</th>
-      <th>email</th>
-      <th>password</th>
-      <th>profession</th>
-      <th>accountCategory</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let u of list">
-      <td>{{ u.id }}</td>
-      <td>{{ u.firstName }}</td>
-      <td>{{ u.firstName }}</td>
-      <td>{{ u.firstName }}</td>
-      <td>{{ u.firstName }}</td>
-      <td>{{ u.firstName }}</td>
-      <td>{{ u.firstName }}</td>
-      <td>{{ u.firstName }}</td>
-    </tr>
-  </tbody>
-</table>
-
-<pre></pre>
-<h1 style="text-align: center">
-  Resultat API : Post <button (click)="add()">ADD</button>
-</h1>
