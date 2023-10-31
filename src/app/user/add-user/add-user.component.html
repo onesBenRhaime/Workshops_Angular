@@ -1,0 +1,85 @@
+<div class="col-8 card p-3">
+  <form>
+    <div class="col-8 form-group">
+      <label class="form-label"> First Name</label>
+      <input
+        type="text"
+        name="firstName"
+        required
+        [(ngModel)]="user.firstName"
+        #firstName="ngModel"
+        class="form-control"
+      />
+      <div></div>
+    </div>
+    <div class="col-8 form-group">
+      <label class="form-label">Last Name</label>
+      <input
+        type="text"
+        name="lastName"
+        required
+        [(ngModel)]="user.lastName"
+        #lastName="ngModel"
+        class="form-control"
+      />
+    </div>
+    <div class="col-8 form-group">
+      <label class="form-label">BirthDate</label>
+      <input
+        type="date"
+        name="birthDate"
+        required
+        [(ngModel)]="user.birthDate"
+        #birthDate="ngModel"
+        class="form-control"
+      />
+    </div>
+    <div class="col-8 form-group">
+      <label class="form-label">Email</label>
+      <input
+        type="date"
+        name="email"
+        required
+        [(ngModel)]="user.email"
+        #email="ngModel"
+        class="form-control"
+      />
+    </div>
+    <div class="col-8 form-group">
+      <label class="form-label">Password</label>
+      <input
+        type="date"
+        name="password"
+        required
+        [(ngModel)]="user.password"
+        #password="ngModel"
+        class="form-control"
+      />
+    </div>
+
+    <div class="col-8 form-group">
+      <label class="form-label">Profession</label>
+      <input
+        type="text"
+        name="profession"
+        required
+        [(ngModel)]="user.profession"
+        #profession="ngModel"
+        class="form-control"
+      />
+    </div>
+    <div class="col-8 form-group">
+      <label class="form-label">Customer Category</label>
+      <input
+        type="text"
+        name="accountCategory"
+        required
+        [(ngModel)]="user.accountCategory"
+        #accountCategory="ngModel"
+        class="form-control"
+      />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
